@@ -3,14 +3,86 @@
 <head>
     <meta charset="UTF-8">   <!-- รับตัวอักษรทุกภาษา -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Workshop #HTML - FORM</title>
+   <style>
+    form {
+        margin: 10px 0;
+        max-width: 500px;
+    }
+    label {
+       display: inline-block; /* label กับ input อยู่ในบรรทัดเดียวกัน */
+       width: 160px;
+       height: 25px;
+    }
+    input, select, textarea {
+        box-sizing: border-box; /* padding กับ border รวมในขนาดของ input เพื่อไม่ให้ layout เพี้ยน */
+
+    }
+    input[type="radio"], input[type="checkbox"]{
+        width: auto;
+    }
+    .buttons {
+        display: flex; /* จัดปุ่มให้อยู่ในบรรทัดเดียวกัน */
+        justify-self: start; /* จัดให้อยู่จุดเริ่มต้น (ซ้ายสุด) */
+        gap: 150px; /* ระยะห่างระหว่างปุ่มแรกกับปุ่มสอง */
+    }
+    .buttons input {
+        padding: 5px 10px; /* ระยะห่างระหว่างข้อความกับขอบปุ่ม */
+    }
+   </style>
 </head>
 <body>
-    <h1>Workshop #HTML-FORM</h1>
+    <h1>Workshop #HTML - FORM</h1>
     <form>
-        <label for="fname">ชื่อ&emsp;</label>
-        <input type="text"id="fname" name="fname"><br>
-    </form>
+        <label for="fname">ชื่อ</label>
+        <input type="text"name="fname"id="fname"><br>
+
+        <label for="lname">สกุล</label>
+        <input type="text" name="lname" id="lname"><br>
+
+        <label for="date">วัน/เดือน/ปีเกิด</label>
+        <input type="date" name="date" id="date"><br>
+
+        <label for="age">อายุ</label>
+        <input type="number" name="age" id="age" min="1"><br>
+        
+        <label>เพศ</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male" style="display: inline;">ชาย</label>
+        <input type="radio" name="gender" id="fmale" value="fmale">
+        <label for="fmale" style="display: inline;">หญิง</label><br>
+
+        <label for="photo">รูป</label>
+        <input type="file" name="photo" id="photo"><br>
+
+        <label for="address">ที่อยู่</label>
+        <textarea name="address" id="address" rows="4"></textarea><br>
+
+        <label for="color">สีที่ชอบ</label>
+        <select name="color" id="color">
+            <option value="red">สีแดง</option>
+            <option value="blue">สีฟ้า</option>
+            <option value="black">สีดำ</option>
+            <option value="white">สีขาว</option>
+        </select><br>
+
+        <label>แนวเพลงที่ชอบ</label>
+        <input type="radio" name="music" id="life" value="เพื่อชีวิต">
+        <label for="life" style="display: inline;">เพื่อชีวิต</label>
+        <input type="radio" name="music" id="lukthung" value="ลูกทุ่ง">
+        <label for="lukthung" style="display: inline;">ลูกทุ่ง</label>
+        <input type="radio" name="music" id="other" value="อื่นๆ">
+        <label for="other" style="display: inline;">อื่นๆ</label><br><br>
+
+        <label>
+            <input type="checkbox" name="consent" id="consent" value="yes">
+            ยินยอมให้เก็บข้อมูล
+        </label><br><br>
+        <div class="buttons">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
+       </form>
 
 </body>
 </html>
