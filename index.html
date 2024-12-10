@@ -4,32 +4,14 @@
     <meta charset="UTF-8">   <!-- รับตัวอักษรทุกภาษา -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop #HTML - FORM</title>
-   <style>
-    form {
-        margin: 10px 0;
-        max-width: 500px;
-    }
-    label {
-       display: inline-block; /* label กับ input อยู่ในบรรทัดเดียวกัน */
-       width: 160px;
-       height: 25px;
-    }
-    input, select, textarea {
-        box-sizing: border-box; /* padding กับ border รวมในขนาดของ input เพื่อไม่ให้ layout เพี้ยน */
+    <link rel="stylesheet" href="mystyle.css">
+    <!-- http://localhost/88823665-camp-66/mystyle.css -->
+    <!-- http://localhost/mystyle.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
-    }
-    input[type="radio"], input[type="checkbox"]{
-        width: auto;
-    }
-    .buttons {
-        display: flex; /* จัดปุ่มให้อยู่ในบรรทัดเดียวกัน */
-        justify-self: start; /* จัดให้อยู่จุดเริ่มต้น (ซ้ายสุด) */
-        gap: 150px; /* ระยะห่างระหว่างปุ่มแรกกับปุ่มสอง */
-    }
-    .buttons input {
-        padding: 5px 10px; /* ระยะห่างระหว่างข้อความกับขอบปุ่ม */
-    }
-   </style>
+  
 </head>
 <body>
     <h1>Workshop #HTML - FORM</h1>
@@ -55,8 +37,8 @@
         <label for="photo">รูป</label>
         <input type="file" name="photo" id="photo"><br>
 
-        <label for="address">ที่อยู่</label>
-        <textarea name="address" id="address" rows="4"></textarea><br>
+        <label for="address" style="vertical-align: middle;">ที่อยู่</label>
+        <textarea name="address" id="address" rows="4" style="vertical-align: middle;"></textarea><br>
 
         <label for="color">สีที่ชอบ</label>
         <select name="color" id="color">
