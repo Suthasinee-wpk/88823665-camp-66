@@ -4,8 +4,25 @@ body{
     display: flex;  /* ช่วยให้การจัดเรียงองค์ประกอบภายในคอนเทนเนอร์ง่ายขึ้น */
     align-items: center;  /* จัดให้อยู่ตรงกลางในแนวตั้ง */
     flex-direction: column;  /* จัดเรียงแนวตั้ง */
-    background-color: #F8F8FF
+    background: linear-gradient(-45deg,#9B7EBD,#D4BEE4,#EEEEEE,#9B7EBD,#EEEEEE);
+    background-size: 300% 300%;
+    transition: backgroud 0.3s ease;
 }
+body:hover {
+    animation: gradient-animation 5s infinite;
+}
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
 h1 {
     color: indigo;  
 }
@@ -15,6 +32,12 @@ h1:hover {
 form {
     margin: 10px 0;
     max-width: 450px;
+    padding: 20px; /* ระยะห่างภายในกรอบ */
+    border: 2px solid #483D8B; /* กรอบความหนา 2px สีม่วงเข้ม */
+    border-radius: 10px; /* มุมโค้งของกรอบ */
+    background-color: #FFFFFF; /* สีพื้นหลังของฟอร์ม */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 form:hover {
     background-color: #E6E6FA;
