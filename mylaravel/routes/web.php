@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MyController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/mycontroller', 
+[MyController::class, 'index']); // ใช้แสดงฟอร์ม
 
-Route::get('/hello', function () {
-    return "<h1>Hello World!</h1>";
-});
+Route::post('/mycontroller', 
+[MyController::class, 'myfunction']); // ส่งข้อมูลจากฟอร์ม
