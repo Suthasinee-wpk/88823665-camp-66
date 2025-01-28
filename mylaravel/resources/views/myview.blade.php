@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,4 +38,11 @@
         @endif
     </div>
 </body>
-</html>
+</html> --}}
+
+<form method="post"
+    action="={{url('/mycontroller')}}">
+    @csrf
+    <input type="text" name="myinput">
+    <button type="submit">Submit</button>
+</form>
