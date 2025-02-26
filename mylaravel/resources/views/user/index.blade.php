@@ -1,6 +1,9 @@
 @extends('layouts.default_with_menu')
 
 @section('content')
+
+<h1>{{ session('user')->name }} </h1>
+
 <style>
  table tbody tr:hover td {
     color: rgb(151, 12, 250);
